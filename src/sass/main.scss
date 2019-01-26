@@ -11,7 +11,8 @@ $shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
 	box-sizing: border-box;
 	font-family: $lato;
 }
-body{
+
+body {
 	background-color: #ffffff;
 }
 
@@ -26,8 +27,8 @@ a {
 }
 
 .main__title {
-		color: $white;
-		font-size: 3rem;
+	color: $white;
+	font-size: 3rem;
 }
 
 
@@ -52,6 +53,7 @@ a {
 	font-size: 1.25rem;
 	background-color: #e1aa6e;
 	position: relative;
+	display: inline-block;
 	&::after {
 		content: '';
 		position: absolute;
@@ -125,12 +127,12 @@ a {
 
 .hero {
 	padding: 180px 0 163px 0;
-	&__title{
+	&__title {
 		text-shadow: $shadow;
 	}
 	& .underline::after {
-			bottom: -26px;
-			display: block;
+		bottom: -26px;
+		display: block;
 	}
 	&__text {
 		width: 41%;
@@ -167,16 +169,34 @@ a {
 
 
 //support
-
-.support{
+.support {
 	padding: 100px 0 300px 0;
 	background: $blue url('../images/support__bg.png') 50% 103.5% no-repeat;
 	text-align: center;
-	&__text{
+	&__text {
 		color: $white;
 		font-size: 1.125rem;
 		margin-top: 40px;
 	}
 }
 
+//help
 
+.help{
+	padding: 70px 0 100px 0;
+	margin: auto;
+	max-width: 70%;
+	text-align: center;
+	&__title{
+		font-weight: bold;
+		font-size: 1.5rem;
+		color: #777777;
+	}
+	&__text{
+		color: #444444;
+		font-size: 1.125rem;
+		margin: 45px 0 45px;
+  line-height: 1.667;
+		
+	}
+}
