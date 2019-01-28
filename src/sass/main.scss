@@ -4,9 +4,10 @@ $blue: #00b5d2;
 $lato: 'Lato',
 sans-serif;
 $shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
- :root {
-font-size: 16px;
+:root {
+	font-size: 16px;
 }
+
 * {
 	padding: 0;
 	margin: 0;
@@ -16,6 +17,7 @@ font-size: 16px;
 
 body {
 	background-color: #ffffff;
+	color: $grey;
 }
 
 a {
@@ -29,25 +31,35 @@ a {
 	position: relative;
 }
 
-.burger{
-	width:30px;
-	height:30px;
+.burger {
+	width: 30px;
+	height: 30px;
 	flex-direction: column-reverse;
 	justify-content: space-between;
 	position: absolute;
 	right: 0;
-	top:40px;
+	top: 40px;
 	display: flex;
-	&__line{
+	&__line {
 		width: 100%;
-		height:5px;
+		height: 5px;
 		background-color: $grey;
-		
+
 	}
 }
 
-.sub__nav{
+.sub__nav {
+	list-style: none;
+	position: absolute;
 	display: none;
+	& .navigation__item {
+		padding: 10px 0;
+		font-size: 0.75rem;
+		&:hover {
+			color: $white;
+			text-shadow: $shadow;
+		}
+	}
 }
 
 
@@ -57,6 +69,7 @@ a {
 	color: $white;
 	font-size: 3rem;
 	font-weight: 900;
+
 }
 
 
@@ -102,7 +115,6 @@ a {
 	}
 }
 
-
 //welcome section
 .welcome {
 	background: url('../images/welcome__bg.png') no-repeat 50% 50%;
@@ -110,12 +122,12 @@ a {
 	width: 100%;
 }
 
-.header{
-	padding-top:40px;
+.header {
+	padding-top: 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	& .navigation{
+	& .navigation {
 		display: none;
 	}
 }
@@ -141,13 +153,18 @@ a {
 	justify-content: space-between;
 	list-style: none;
 	margin-right: -20px;
+	position: relative;
 	&__item {
 		text-transform: uppercase;
 		font-size: 1rem;
 		color: $grey;
 		font-family: $lato;
-		padding: 0 20px 20px 20px;
+		padding: 0 20px;
+		&:hover .sub__nav {
+			display: block;
+		}
 	}
+
 	&__link.active {
 		text-shadow: $shadow;
 		color: $white;
@@ -162,6 +179,7 @@ a {
 
 	}
 }
+
 
 .hero {
 	padding: 180px 0 163px 0;
@@ -241,27 +259,24 @@ a {
 //slider
 .slider {
 	background: #1b97c5 url('../images/slider__bg.png') 50% 100% no-repeat;
-	height: 600px;
+	height: 50vw;
 	position: relative;
-	&__box{
-//		border: 8px solid $white;
+	&__box {
+		border: 8px solid $white;
 		overflow: hidden;
 		width: 62%;
 		max-height: 505px;
 		position: absolute;
-		left:50%;
+		left: 50%;
 		bottom: 0;
-		transform: translate(-50%, 10%);
+		transform: translate(-50%, 20%);
 	}
-	&__item{
-		width:100%;
+	&__item {
+		width: 100%;
 		height: 100%;
-		display:none;
 	}
 }
-.current{
-	display: block;
-}
+
 
 //team
 .team {
@@ -305,63 +320,140 @@ a {
 }
 
 //footer
-.footer{
+.footer {
 	border-top: 3px solid #cccccc;
 	border-bottom: 1px solid #eeeeee;
-	padding:30px 0 50px 0;
+	padding: 30px 0 50px 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	&__link{
+	&__link {
 		color: #999999;
 		font-weight: bold;
 	}
 
-	&__link:hover{
+	&__link:hover {
 		color: #000000;
 	}
-	&__dots{
+	&__dots {
 		display: flex;
 		justify-content: center;
 		margin: 30px 0 52px 0;
 	}
-	&__text{
+	&__text {
 		font-size: 0.875rem;
 		color: #aaaaaa;
 		margin-bottom: 25px;
 	}
-	&__mail{
+	&__mail {
 		font-weight: bold;
 		color: #e1aa6e;
 	}
 }
-.dot{
+
+.dot {
 	width: 13px;
 	height: 13px;
 	background-color: #eeeeee;
-	&:not(:last-child){
+	&:not(:last-child) {
 		margin-right: 40px;
 	}
 }
 
 //copyright
-.copyright{
+.copyright {
 	padding: 35px 0 56px 0;
 	text-align: center;
-	&__text{
-		color:#aaaaaa;
+	&__text {
+		color: #aaaaaa;
 		font-size: 0.75rem;
 	}
 
 }
 
 
-@media only screen and (min-width:1200px){
-	.burger{
-		display: none !important;
+@media only screen and (min-width:1200px) {
+	.burger {
+		display: none;
 	}
-	.header  .navigation{
-		display: flex !important;
+	.header .navigation {
+		display: flex;
 	}
 }
+
+
+@media (max-width: 991.98px) { 
+	.header{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.header nav{
+		align-self: flex-end;
+	}
+	
+	.support{
+	background: $blue url('../images/support__bg.png') 50% 103.5% no-repeat;
+		background-size: contain;
+		padding-top: 10vw;
+		padding-bottom: 30vw;
+
+	}
+}
+
+
+
+@media (max-width: 767.98px) { 
+	.partners__list{
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.partners__item{
+		width: 25%;
+		margin: 5px !important;
+	}
+	.team__img{
+		display: none;
+	}
+	.team__message{
+		padding: 40px;
+	}
+}
+
+@media (max-width: 575.98px) { 
+	:root{
+		font-size: 14px;
+	}
+	.logo{
+		width: 70%;
+	}
+	.logo__link--img{
+		width: 100%;
+	}
+	
+	.burger{
+		width: 20px;
+		height: 20px;
+		&__line{
+			height: 4px;
+		}
+	}
+	.partners__item{
+		width: 40%;
+		margin: 10px !important;
+	}
+
+	.footer{
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.footer .navigation{
+		flex-wrap: wrap;
+		justify-content: 
+	flex-start;
+	}
+	.footer .navigation_item{
+		padding: 15pxpx;
+	}
+}
+

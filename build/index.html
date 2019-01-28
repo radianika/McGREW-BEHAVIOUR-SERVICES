@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	
 
@@ -42,8 +44,8 @@
 						<li class="navigation__item">
 							<a href="#" class="navigation__link underline">about us</a>
 							<ul class="sub__nav">
-								<li><a href="#">First option</a></li>
-								<li><a href="#">Second Option</a></li>
+								<li class="navigation__item"><a href="#">First option</a></li>
+								<li class="navigation__item"><a href="#">Second Option</a></li>
 							</ul>
 						</li>
 						<li class="navigation__item">
@@ -129,9 +131,10 @@
 	<section class="slider">
 <h2 class="slider__tittle">
 	<div class="slider__box">
-		<img src="images/slider/slider1.png" class="slider__item current" alt="slider img"></div>
-		<img class="slider__item" alt="another slider img"></div>
-	</div>
+		<div><img class="slider__item" src="images/slider/slider1.png"  alt="slider img"></div>
+		<div><img class="slider__item" src ='images/welcome__bg.png' alt="another slider img"></div>
+		<div><img class="slider__item" src ='images/team.png' alt="another slider img"></div>
+		</div>
 </h2>
 	</section>
 
@@ -151,6 +154,7 @@
 
 
 	<!--FOOTER SECTION-->
+	
 	<footer class="footer">
 		<nav>
 			<ul class="navigation">
@@ -181,12 +185,16 @@
 	</footer>
 	
 		<!--COPYRIGHT SECTION-->
+		
 	<section class="copyright">
 		<p class="copyright__text">
 			Copyright Ⓒ 2017 McGrews Behavior Services All Rights Reserved
 		</p>
 	</section>
       <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 
