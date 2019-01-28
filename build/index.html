@@ -4,9 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>McGREW BEHAVIOUR SERVICES</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 
 </head>
 
@@ -23,18 +25,26 @@
 
 				<div class="logo">
 					<a href="#" alt="McGREW BEHAVIOUR SERVICES" class="logo__link">
-						<img src="images/logo.png" alt="Blue hurts logo" class="logo__link--img">
-						<span class="logo__link--text">McGREW BEHAVIOUR SERVICES</span>
+						<img src="images/logo.png" alt="logo" class="logo__link--img">
 					</a>
 				</div>
 
 				<nav>
+				<div class="burger">
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+				</div>
 					<ul class="navigation">
 						<li class="navigation__item">
 							<a href="#" class="navigation__link underline active">home</a>
 						</li>
 						<li class="navigation__item">
 							<a href="#" class="navigation__link underline">about us</a>
+							<ul class="sub__nav">
+								<li><a href="#">First option</a></li>
+								<li><a href="#">Second Option</a></li>
+							</ul>
 						</li>
 						<li class="navigation__item">
 							<a href="#" class="navigation__link underline">contact</a>
@@ -160,9 +170,9 @@
 		</nav>
 		
 		<div class="footer__dots">
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
 		</div>
 		
 		<p class="footer__text">120 Theresa Ave, American Canyon, CA 94503</p>
@@ -176,6 +186,7 @@
 			Copyright Ⓒ 2017 McGrews Behavior Services All Rights Reserved
 		</p>
 	</section>
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 
 </body>
 
