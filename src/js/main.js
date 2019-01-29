@@ -41,9 +41,9 @@
 $(document).ready(function(){
   $('.slider__box').slick({
     autoplay: true,
-  autoplaySpeed: 3000,
-		  dots: false,
-  infinite: false,
+  	autoplaySpeed: 3000,
+		dots: false,
+  	infinite: false,
 		prevArrow: false,
 		nextArrow:false
   });
